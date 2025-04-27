@@ -15,7 +15,7 @@ const EmojiCatalog = ({ searchTerm }) => {
   };
 
   useEffect(() => {
-    axios.get('https://https://emoji-hub-production.up.railway.app/api/emojis')
+    axios.get('https://emoji-hub-production.up.railway.app/api/emojis')
       .then(response => {
         setEmojis(response.data);
         const uniqueCategories = [...new Set(response.data.map(emoji => emoji.category))];
