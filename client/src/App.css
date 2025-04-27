@@ -1,0 +1,253 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #FFECED;
+  color: #646464;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emoji-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.emoji-card:hover {
+  transform: scale(1.05);
+}
+
+.emoji-symbol {
+  font-size: 2rem;
+}
+
+.emoji-name {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #221b1b;
+}
+
+h1{
+  font-size: 3rem;
+  color: #D86F29;
+  text-align: center;
+}
+
+.emoji-category {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+select {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 320px;
+  font-size: 16px;
+}
+
+.emoji-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emoji-controls label {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.emoji-controls select {
+  width: 100%;
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.emoji-card button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-card button:hover {
+  transform: scale(1.2);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.category {
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.style-select {
+  background-color: #D86F29;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+  width: 140px;
+}
+
+.style-select option {
+  color: black;
+}
+
+.header {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.navigation {
+  display: flex;
+  gap: 50px;
+  font-size: 18px;
+  margin: 0 30px;
+}
+
+.navigation a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navigation a:hover {
+  color: #D86F29;
+}
+
+.search-input[type="text"] {
+  background-color: #D86F29;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: width 0.3s ease;
+  color: #fff;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #fff;
+}
+
+.more-emojis-button {
+  background-color: #D86F29;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more-emojis-button:hover {
+  background-color: #b85b21;
+}
+
+.favorites-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #221b1b;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .emoji-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .emoji-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .more-emojis-button {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .style-select {
+    width: 150px;
+  }
+}
