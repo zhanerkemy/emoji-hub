@@ -10,7 +10,7 @@ const EmojiDetailPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/emojis')
+    axios.get('https://https://emoji-hub-production.up.railway.app/api/emojis')
       .then(response => {
         const foundEmoji = response.data.find(e => e.name === decodedName);
         setEmoji(foundEmoji);
