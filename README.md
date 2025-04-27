@@ -63,3 +63,5 @@ Vercel:	удобный и быстрый хостинг для фронтенд-
 OpenAI API:	возможность создавать креативные описания эмодзи
 
 _Деплой:_ https://emoji-hub-chi.vercel.app/
+_Видео:_ https://drive.google.com/file/d/1rS7xMmpUgyVhyeZofwTKU13KJtmGThXI/view?usp=sharing
+
